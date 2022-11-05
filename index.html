@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Simple Calculator (HTML, CSS and JavaScript)</title>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body class="wrapper">
+		<section class="introduction">
+			<h1 class="introduction__title">🖩 Simple Calculator</h1>
+			<p class="introduction__description">
+				Really simple calculator created with HTML, CSS and JavaScript.
+			</p>
+		</section>
+
+		<section class="calculator">
+			<input type="text" class="calculator__screen" value="0" disabled />
+
+			<div class="calculator__keys">
+				<button type="button" class="btn">C</button>
+				<button type="button" class="btn">&plusmn;</button>
+				<button type="button" class="btn">&percnt;</button>
+				<button type="button" class="btn btn--orange">&divide;</button>
+
+				<button type="button" class="btn">7</button>
+				<button type="button" class="btn">8</button>
+				<button type="button" class="btn">9</button>
+				<button type="button" class="btn btn--orange">&times;</button>
+
+				<button type="button" class="btn">4</button>
+				<button type="button" class="btn">5</button>
+				<button type="button" class="btn">6</button>
+				<button type="button" class="btn btn--orange">&minus;</button>
+
+				<button type="button" class="btn">1</button>
+				<button type="button" class="btn">2</button>
+				<button type="button" class="btn">3</button>
+				<button type="button" class="btn btn--orange">&plus;</button>
+
+				<button type="button" class="btn btn--medium">0</button>
+				<button type="button" class="btn btn--orange">.</button>
+				<button type="button" class="btn btn--orange">&equals;</button>
+			</div>
+		</section>
+		<footer class="credits">
+			Created by
+			<a href="#" class="credits__link" title="Luciano Ayres LikendIn"
+				>Luciano Ayres</a
+			>
+			&#8729;
+			<a href="#" class="credits__link" title="View source code on GitHub"
+				>Source code</a
+			>
+		</footer>
+	</body>
+</html>

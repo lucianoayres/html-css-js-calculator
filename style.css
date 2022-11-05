@@ -1,0 +1,183 @@
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+	--white: #ffffff;
+	--white-alpha-50: rgba(255, 255, 255, 0.4);
+	--white-alpha-100: rgba(255, 255, 255, 0.45);
+	--white-alpha-200: rgba(255, 255, 255, 0.15);
+	--white-alpha-300: rgba(255, 255, 255, 0.05);
+
+	--gray-50: #efefef;
+	--gray-100: #eaeaea;
+	--gray-200: #cccccc;
+	--gray-300: #727272;
+	--gray-400: #5a5a5a;
+
+	--black-50: #333333;
+	--black-100: #252525;
+	--black-alpha-50: rgba(0, 0, 0, 0.04);
+
+	--blue-50: #337cac;
+
+	--orange-50: #dd8d37;
+	--orange-100: #f5731c;
+
+	--font-family-title: 'Poppins', sans-serif;
+	--font-family-text: 'Poppins', sans-serif;
+
+	--font-size-x-large: 3.4rem;
+	--font-size-large: 3.2rem;
+	--font-size-medium: 1.4rem;
+	--font-size-small: 1.2rem;
+
+	--border-radius-max: 12px;
+	--border-radius-medium: 8px;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+.wrapper {
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+
+	font-family: var(--font-family-text);
+	color: var(--black-50);
+
+	background: var(--gray-50);
+}
+
+.introduction {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.introduction__title {
+	font-size: var(--font-size-large);
+	font-family: var(--font-family-title);
+
+	background: -webkit-linear-gradient(var(--blue-50), var(--black-50));
+	background-clip: text;
+
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.introduction__description {
+	color: var(--gray-300);
+	font-size: var(--font-size-medium);
+}
+
+.calculator {
+	width: 400px;
+	background-color: var(--white);
+
+	border: 1px solid var(--gray-200);
+	border-radius: 12px;
+
+	box-shadow: 0.2rem 0.2rem 0.2rem var(--gray-200);
+}
+
+.calculator__screen {
+	width: 100%;
+	font-size: 5rem;
+	height: 80px;
+	border-radius: var(--border-radius-medium) var(--border-radius-medium) 0px 0px;
+	border: var(--black-100);
+	background-color: var(--black-100);
+	color: var(--white);
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 10px;
+}
+
+.calculator__keys {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+
+	padding: 10px;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 60px;
+	background-color: var(--white);
+	border-radius: var(--border-radius-max);
+
+	border: 1px solid var(--gray-200);
+	background-color: transparent;
+	font-size: var(--font-size-large);
+	color: var(--black-50);
+
+	background-image: linear-gradient(
+		to bottom,
+		transparent,
+		transparent 50%,
+		var(--black-alpha-50)
+	);
+
+	box-shadow: inset 0 0 0 1px var(--white-alpha-50),
+		inset 0 1px 0 0 var(--white-alpha-100),
+		inset 0 -1px 0 0 var(--white-alpha-200), 0 1px 0 0 var(--white-alpha-200);
+
+	text-shadow: 0 1px var(--white-alpha-50);
+	transition: background-color 0.24s;
+	user-select: none;
+}
+
+.btn:hover {
+	background-color: var(--gray-100);
+}
+
+.btn--orange {
+	background-color: var(--orange-50);
+	color: var(--white);
+	border: none;
+}
+
+.btn--orange:hover {
+	background-color: var(--orange-100);
+}
+
+.btn--big {
+	grid-column: 1 / 4;
+}
+
+.btn--medium {
+	grid-column: 1 / 3;
+}
+
+.btn--flip-horizontal {
+	transform: scaleX(-1);
+}
+
+.credits {
+	font-size: var(--font-size-small);
+}
+
+.credits__link {
+	color: var(--black-50);
+}
+
+.credits__link:hover {
+	font-weight: 600;
+	text-decoration: none;
+}

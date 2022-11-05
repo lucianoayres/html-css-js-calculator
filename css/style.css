@@ -55,6 +55,8 @@ html {
 	font-family: var(--font-family-text);
 	color: var(--black-50);
 
+	padding: 1rem;
+
 	background: var(--gray-50);
 }
 
@@ -163,6 +165,10 @@ html {
 
 .btn--medium {
 	grid-column: 1 / 3;
+}
+
+.btn--large {
+	grid-column: 1 / 4;
 }
 
 .btn--flip-horizontal {

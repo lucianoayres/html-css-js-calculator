@@ -1,4 +1,4 @@
-# Simple Calculator
+# 🖩 Simple Calculator
 
 [Simple calculator](https://lucianoayres.github.io/html-css-js-calculator/) created with HTML, CSS (BEM) and JavaScript.
 

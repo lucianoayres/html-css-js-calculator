@@ -1,4 +1,4 @@
-# html-css-js-calculator
+# Simple Calculator
 
 Simple calculator created with HTML, CSS (BEM) and JavaScript.
 

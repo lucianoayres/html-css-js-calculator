@@ -107,6 +107,10 @@ html {
 	padding-left: 10px;
 }
 
+.screen--small-text {
+	font-size: 3rem;
+}
+
 .calculator__keys {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);

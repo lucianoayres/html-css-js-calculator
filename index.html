@@ -33,7 +33,7 @@
 		/>
 
 		<link rel="stylesheet" href="./css/style.css" />
-		<script defer src="./js/main.js"></script>
+		<script defer src="./js/calculator.js"></script>
 	</head>
 	<body class="wrapper">
 		<section class="introduction">
@@ -47,27 +47,43 @@
 			<input type="text" class="calculator__screen" disabled />
 
 			<div class="calculator__keys">
-				<button type="button" class="btn btn--medium">C</button>
-				<button type="button" class="btn btn--flip-horizontal">&#10132;</button>
-				<button type="button" class="btn btn--orange">&divide;</button>
+				<button type="button" class="btn btn--medium" value="reset">C</button>
+				<button
+					type="button"
+					class="btn btn--flip-horizontal"
+					value="backspace"
+				>
+					&#10132;
+				</button>
+				<button type="button" class="btn btn--orange" value="divide">
+					&divide;
+				</button>
 
-				<button type="button" class="btn">7</button>
-				<button type="button" class="btn">8</button>
-				<button type="button" class="btn">9</button>
-				<button type="button" class="btn btn--orange">&times;</button>
+				<button type="button" class="btn" value="7">7</button>
+				<button type="button" class="btn" value="8">8</button>
+				<button type="button" class="btn" value="9">9</button>
+				<button type="button" class="btn btn--orange" value="multiply">
+					&times;
+				</button>
 
-				<button type="button" class="btn">4</button>
-				<button type="button" class="btn">5</button>
-				<button type="button" class="btn">6</button>
-				<button type="button" class="btn btn--orange">&minus;</button>
+				<button type="button" class="btn" value="4">4</button>
+				<button type="button" class="btn" value="5">5</button>
+				<button type="button" class="btn" value="6">6</button>
+				<button type="button" class="btn btn--orange" value="subtract">
+					&minus;
+				</button>
 
-				<button type="button" class="btn">1</button>
-				<button type="button" class="btn">2</button>
-				<button type="button" class="btn">3</button>
-				<button type="button" class="btn btn--orange">&plus;</button>
+				<button type="button" class="btn" value="1">1</button>
+				<button type="button" class="btn" value="2">2</button>
+				<button type="button" class="btn" value="3">3</button>
+				<button type="button" class="btn btn--orange" value="add">
+					&plus;
+				</button>
 
-				<button type="button" class="btn btn--large">0</button>
-				<button type="button" class="btn btn--orange">&equals;</button>
+				<button type="button" class="btn btn--large" value="0">0</button>
+				<button type="button" class="btn btn--orange" value="equals">
+					&equals;
+				</button>
 			</div>
 		</section>
 		<footer class="credits">

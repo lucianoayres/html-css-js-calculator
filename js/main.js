@@ -2,10 +2,16 @@ let runningTotal = 0
 let buffer = '0'
 let previousOperator = null
 const screen = document.querySelector('.calculator__screen')
+
+let bufferValues = {
+	primary: null,
+	secondary: null,
+}
+
 screen.value = buffer
 
 function buttonClick(value) {
-	if (isNaN(parseInt(value))) {
+	if (isNaN(parseFloat(value))) {
 		handleSymbol(value)
 	} else {
 		handleNumber(value)
@@ -15,7 +21,7 @@ function buttonClick(value) {
 }
 
 function handleNumber(value) {
-	if (buffer === '0') {
+	if (buffer === '0' || buffer === bufferValues.primary) {
 		buffer = value
 	} else {
 		buffer += value
@@ -28,16 +34,35 @@ function handleMath(value) {
 		return
 	}
 
-	const intBuffer = parseInt(buffer)
+	const intBuffer = parseFloat(buffer)
 	if (runningTotal === 0) {
 		runningTotal = intBuffer
 	} else {
 		flushOperation(intBuffer)
 	}
 
+	updateBufferValue(intBuffer)
+
 	previousOperator = value
 
-	// buffer = '0'
+	if (bufferValues.primary) {
+		buffer = parseFloat(bufferValues.primary)
+	}
+}
+
+function updateBufferValue(bufferNumber) {
+	if (previousOperator) {
+		bufferValues.secondary = bufferNumber
+	} else {
+		bufferValues.primary = bufferNumber
+	}
+}
+
+function resetBufferValues() {
+	bufferValues = {
+		primary: null,
+		secondary: null,
+	}
 }
 
 function flushOperation(intBuffer) {
@@ -52,21 +77,27 @@ function flushOperation(intBuffer) {
 	}
 }
 
-function handleSymbol(value) {
-	switch (value) {
+function handleSymbol(symbol) {
+	switch (symbol) {
 		case 'C':
 			buffer = '0'
 			runningTotal = 0
+
+			resetBufferValues()
 			break
 		case '=':
+			updateBufferValue(parseFloat(buffer))
+
 			if (previousOperator === null) {
 				// need two numbers to do math
 				return
 			}
-			flushOperation(parseInt(buffer))
+			flushOperation(parseFloat(buffer))
 			previousOperator = null
 			buffer = +runningTotal
 			runningTotal = 0
+
+			resetBufferValues()
 			break
 		case '➔':
 			if (buffer.length === 1) {
@@ -80,7 +111,7 @@ function handleSymbol(value) {
 		case '−':
 		case '×':
 		case '÷':
-			handleMath(value)
+			handleMath(symbol)
 			break
 	}
 }

@@ -26,7 +26,8 @@ html {
 	--font-family-title: 'Poppins', sans-serif;
 	--font-family-text: 'Poppins', sans-serif;
 
-	--font-size-x-large: 3.4rem;
+	--font-size-xxl: 5rem;
+	--font-size-xl: 3.4rem;
 	--font-size-large: 3.2rem;
 	--font-size-medium: 1.4rem;
 	--font-size-small: 1.2rem;
@@ -96,7 +97,7 @@ html {
 
 .calculator__screen {
 	width: 100%;
-	font-size: 5rem;
+	font-size: var(--font-size-xxl);
 	height: 80px;
 	border-radius: var(--border-radius-medium) var(--border-radius-medium) 0px 0px;
 	border: var(--black-100);
@@ -108,7 +109,7 @@ html {
 }
 
 .screen--small-text {
-	font-size: 3rem;
+	font-size: var(--font-size-large);
 }
 
 .calculator__keys {

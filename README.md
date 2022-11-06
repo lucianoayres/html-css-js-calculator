@@ -2,4 +2,4 @@
 
 [Simple calculator](https://lucianoayres.github.io/html-css-js-calculator/) created with HTML, CSS (BEM) and JavaScript.
 
-![image](https://user-images.githubusercontent.com/20209393/200136115-055da605-c99f-40f5-987c-679271f42deb.png)
+![image](https://user-images.githubusercontent.com/20209393/200161867-1dd545f2-922f-446e-95b5-ccc750344f00.png)
